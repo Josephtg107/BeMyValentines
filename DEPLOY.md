@@ -34,10 +34,13 @@ Si prefieres no usar comandos.
 
 ## Opción 3: GitHub Pages (Más técnico) 🐙
 
-1.  Sube este proyecto a un nuevo repositorio en tu cuenta de GitHub.
+1.  Sube este proyecto a un nuevo repositorio en tu cuenta de GitHub llamado `BeMyValentines`.
 2.  Entra a la configuración del repositorio (`Settings`).
 3.  Ve a `Pages` en el menú lateral.
-4.  Permite que se despliegue desde la rama `main` o usa una GitHub Action si prefieres.
+4.  En **Build and deployment** > **Source**, asegúrate de que esté en "Deploy from a branch".
+5.  En **Branch**, selecciona `main` y en la carpeta elige `/ (root)`.
+6.  **IMPORTANTE**: Como es una aplicación React (Vite), GitHub Pages intentará servir el `index.html` de la raíz, pero el real está en la carpeta `dist`.
+    -   **Recomendación**: Usa el comando `npm install gh-pages --save-dev` y configura el script `"deploy": "gh-pages -d dist"` en tu `package.json` para subirlo fácilmente.
 
 ---
 **¡Mucha suerte!** Espero que diga que sí (aunque con esta página es seguro). 💘
